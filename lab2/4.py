@@ -23,4 +23,6 @@ if args.upper:
 if args.lines is not None:
     lines = lines[:args.lines]
 
-print(''.join(lines))
+# print(''.join(lines))
+with open(args.file2, 'w') as f:
+    f.writelines(lines)
