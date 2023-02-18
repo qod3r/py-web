@@ -5,7 +5,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument("nums", nargs='*')
 args = parser.parse_args()
 nums = []
-if len(args.nums) < 2:
+if len(args.nums) == 0:
+    print('NO PARAMS')
+elif len(args.nums) < 2:
     print('TOO FEW PARAMS')
 elif len(args.nums) > 2:
     print('TOO MANY PARAMS')
